@@ -6,13 +6,11 @@ def openfile(filename):
             file = open(filename, "r")
             for line in file:
                 print(line.strip())
-    except FileNotFoundError:
-        print(f"Error, file doesn't exit.")
-    finally:
-
         file.close()
         print()
         print("#File closed.")
+    except FileNotFoundError:
+        print(f"Error, file doesn't exit.")
 
 
 openfile("list_of_students.txt")
